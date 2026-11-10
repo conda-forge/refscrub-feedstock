@@ -1,6 +1,7 @@
 context:
   name: refscrub
   version: "1.1.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name }}
@@ -22,7 +23,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools
+    - setuptools >=77
   run:
     - python >=${{ python_min }}
 
