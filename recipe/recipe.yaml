@@ -1,6 +1,7 @@
 context:
   name: refscrub
-  version: "1.0.0"
+  version: "1.1.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name }}
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://gitlab.com/earthscope/public/epic/passoft/refscrub/-/archive/v${{ version }}/refscrub-v${{ version }}.tar.gz
-  sha256: cabb842f9d15b15735ee2568a1df4e7d687f07eb6a3e627609d60df64ffa6c14
+  sha256: 3c5048ba1345e8388b65c46131b2ff9599acebccede7d023db68afd357b0d732
 
 build:
   noarch: python
@@ -22,7 +23,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools
+    - setuptools >=77
   run:
     - python >=${{ python_min }}
 
